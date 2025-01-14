@@ -5,8 +5,14 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(child: Text('Api test'),),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Home view'),
+          backgroundColor: Colors.orange,
+        ),
+        body: const Text('Api test'),
+      ),
     );
   }
 }
