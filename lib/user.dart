@@ -1,9 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'users.g.dart';
+part 'user.g.dart';
 
 @JsonSerializable()
-class Users {
+class User {
     
   // إذا كان الباك إند يُرجع 'idd' بدلاً من 'id'، نقوم بربطه بـ 'id' باستخدام JsonKey.
  // @JsonKey(name: 'idd')
@@ -15,11 +15,11 @@ class Users {
   String? status;
 
   // المُنشئ لتهيئة كائن من فئة Users.
-  Users({this.id, this.name, this.email, this.gender, this.status});
+  User({this.id, this.name, this.email, this.gender, this.status});
 
   /// مُنشئ مصنع لإنشاء كائن `Users` جديد من خريطة JSON.
-  factory Users.fromJson(Map<String, dynamic> json) => _$UsersFromJson(json);
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 
   /// دالة لتحويل كائن `Users` إلى خريطة JSON.
-  Map<String, dynamic> toJson() => _$UsersToJson(this);
+  Map<String, dynamic> toJson() => _$UserToJson(this);
 }

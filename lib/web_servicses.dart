@@ -1,7 +1,6 @@
 
-import 'package:api_apps/users.dart';
+import 'package:api_apps/user.dart';
 import 'package:dio/dio.dart';
-import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'web_servicses.g.dart';
@@ -13,7 +12,8 @@ abstract class WebServicses {
 
   // name of endpoint
   @GET('users')
-  Future<List<Users>>getAllUsers();
+  //abstract function without body
+  Future<List<User>>getAllUsers();
   
 }
 
